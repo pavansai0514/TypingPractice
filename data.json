@@ -1,17 +1,26 @@
 {
-  "quotes": [
-    "Practice makes perfect.",
-    "Typing is like dancing with your fingers."
-  ],
+ 
+
   "dotnet": [
     "dotnet ef migrations add InitialCreate",
     "dotnet ef database update",
-  "dotnet ef migrations remove",
-  "dotnet add package Microsoft.EntityFrameworkCore.SqlServer"
-
+    "dotnet ef migrations remove",
+    "dotnet add package Microsoft.EntityFrameworkCore.SqlServer"
   ],
-  "paragraphs": [
-    "Typing improves your brain-hand coordination. It’s a skill developed through effort and consistency.",
-    "Words form the foundation of communication, and typing is the bridge between thought and text."
+
+  "react": [
+    "npm create vite@latest my-vite-app ",
+    "npm install -g json-server",
+    "npm install react-router-dom",
+    "npm install react-bootstrap bootstrap",
+    "npm install react-router-dom",
+    "npx kill-port 3000"
+  ],
+
+  "git":[
+    "git remote add origin link",
+    "git push origin main"
   ]
+
+ 
 }
