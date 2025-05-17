@@ -28,15 +28,15 @@ function startTest() {
 }
 
 
-
-inputEl.addEventListener('input', () => {
-  if (inputEl.value.trim() === quote.trim()) {
-
+inputEl.addEventListener('keydown', (e) => {
+  // Check if Enter is pressed AND the input matches the quote
+  if (e.key === 'Enter' && inputEl.value.trim() === quote.trim()) {
     inputEl.value = '';
     inputEl.style.display = 'none';
-    startTest(); // no delay now, loads instantly
+    startTest(); // load new quote
   }
 });
+
 
 
 typeSelect.addEventListener('change', () => {
