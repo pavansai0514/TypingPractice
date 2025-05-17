@@ -2,22 +2,21 @@ const quoteEl = document.getElementById('quote');
 const inputEl = document.getElementById('input');
 const wpmEl = document.getElementById('wpm');
 const accuracyEl = document.getElementById('accuracy');
+const typeSelect = document.getElementById('typeSelect');
 
+let allData = {};
+let currentData = [];
 let quote = '';
 
-
-const quotes = [
-  "dotnet ef migrations add InitialCreate",
-  "dotnet ef database update",
-  "dotnet ef migrations remove"
- 
-];
-
 function getRandomQuote() {
-  return quotes[Math.floor(Math.random() * quotes.length)];
+  return currentData[Math.floor(Math.random() * currentData.length)];
 }
 
 function startTest() {
+  const selectedType = typeSelect.value;
+  currentData = allData[selectedType] || [];
+  if (currentData.length === 0) return;
+
   quote = getRandomQuote();
   quoteEl.textContent = quote;
   inputEl.value = '';
@@ -28,12 +27,7 @@ function startTest() {
 
 function calculateResults() {
   const inputText = inputEl.value.trim();
-  const inputWords = inputText.split(/\s+/).length;
-
-  // Estimate WPM by assuming average word length is 5 characters
   const wpm = Math.round((inputText.length / 5));
-  
-  // Accuracy calculation
   let correct = 0;
   for (let i = 0; i < inputText.length; i++) {
     if (inputText[i] === quote[i]) correct++;
@@ -49,8 +43,20 @@ inputEl.addEventListener('input', () => {
     calculateResults();
     inputEl.value = '';
     inputEl.style.display = 'none';
-    startTest(); // Immediately load the next quote
+    startTest(); // Immediately load next item
   }
 });
 
-startTest(); // Initialize the first quote
+typeSelect.addEventListener('change', () => {
+  inputEl.style.display = 'block';
+  startTest();
+});
+
+fetch('data.json')
+  .then(response => response.json())
+  .then(data => {
+    allData = data;
+    currentData = allData["quotes"]; // default
+    startTest();
+  })
+  .catch(error => console.error("Error loading data:", error));

@@ -1,0 +1,17 @@
+{
+  "quotes": [
+    "Practice makes perfect.",
+    "Typing is like dancing with your fingers."
+  ],
+  "dotnet": [
+    "dotnet ef migrations add InitialCreate",
+    "dotnet ef database update",
+  "dotnet ef migrations remove",
+  "dotnet add package Microsoft.EntityFrameworkCore.SqlServer"
+
+  ],
+  "paragraphs": [
+    "Typing improves your brain-hand coordination. It’s a skill developed through effort and consistency.",
+    "Words form the foundation of communication, and typing is the bridge between thought and text."
+  ]
+}
