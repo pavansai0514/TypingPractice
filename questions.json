@@ -1,0 +1,52 @@
+{
+  "dotnet": [
+    {
+      "question": "What command adds an initial EF Core migration in .NET?",
+      "answer": "dotnet ef migrations add InitialCreate"
+    },
+    {
+      "question": "What command updates the database using the latest EF Core migration?",
+      "answer": "dotnet ef database update"
+    },
+    {
+      "question": "What command removes the last EF Core migration?",
+      "answer": "dotnet ef migrations remove"
+    },
+    {
+      "question": "What command adds the SQL Server provider package in .NET EF Core?",
+      "answer": "dotnet add package Microsoft.EntityFrameworkCore.SqlServer"
+    }
+  ],
+  "react": [
+    {
+      "question": "What command creates a new Vite app named 'my-vite-app'?",
+      "answer": "npm create vite@latest my-vite-app"
+    },
+    {
+      "question": "What command installs json-server globally?",
+      "answer": "npm install -g json-server"
+    },
+    {
+      "question": "What command installs React Router DOM?",
+      "answer": "npm install react-router-dom"
+    },
+    {
+      "question": "What command installs React Bootstrap and Bootstrap?",
+      "answer": "npm install react-bootstrap bootstrap"
+    },
+    {
+      "question": "What command kills the process running on port 3000?",
+      "answer": "npx kill-port 3000"
+    }
+  ],
+  "git": [
+    {
+      "question": "What Git command adds a remote repository named 'origin'?",
+      "answer": "git remote add origin link"
+    },
+    {
+      "question": "What Git command pushes to the main branch of origin?",
+      "answer": "git push origin main"
+    }
+  ]
+}

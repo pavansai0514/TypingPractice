@@ -1,8 +1,7 @@
 {
  
-
   "dotnet": [
-    "dotnet ef migrations add InitialCreate",
+    "dotnet ef migrations add InitialCreate", 
     "dotnet ef database update",
     "dotnet ef migrations remove",
     "dotnet add package Microsoft.EntityFrameworkCore.SqlServer"
@@ -21,6 +20,7 @@
     "git remote add origin link",
     "git push origin main"
   ]
+
 
  
 }

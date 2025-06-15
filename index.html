@@ -10,20 +10,33 @@
 
 <body>
   <div class="container">
-    <h1>Typing Speed Test</h1>
-    <p id="quote"></p>
-    <textarea id="input" placeholder="Start typing here..."></textarea>
+    <h1>Typing Practice</h1>
 
+    <!-- Displayed text (quote or question) -->
+    <p id="quote" class="display-text"></p>
 
+    <!-- Answer input -->
+    <textarea id="input" placeholder="Start typing or answer here..."></textarea>
+    <button id="skipBtn">Skip</button>
+    <!-- Select content type -->
     <div class="options_container">
       <label for="typeSelect">Choose content type:</label>
       <select id="typeSelect">
-        <option value="dotnet">dotnet</option>
+        <option value="dotnet">DotNet</option>
         <option value="git">Git</option>
         <option value="react">React</option>
+ 
       </select>
     </div>
 
+    <!-- Mode Selector -->
+    <div class="mode_selector">
+      <label for="modeSelect">Choose mode:</label>
+      <select id="modeSelect">
+        <option value="normal">Typing Mode</option>
+        <option value="qa">Q&A Mode</option>
+      </select>
+    </div>
 
   </div>
 
